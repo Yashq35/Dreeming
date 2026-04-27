@@ -1,9 +1,11 @@
 import * as XLSX from 'xlsx'
 import * as fs from 'fs'
 import * as path from 'path'
+import { fileURLToPath } from 'url'
 
-const XLSX_PATH = path.resolve(process.cwd(), 'Suriname_Automotive_Database_2026_ENRICHED_v3.xlsx')
-const OUT_DIR = path.resolve(process.cwd(), 'data')
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+const XLSX_PATH = path.resolve(__dirname, '..', 'Suriname_Automotive_Database_2026_ENRICHED_v3.xlsx')
+const OUT_DIR = path.resolve(__dirname, '..', 'data')
 
 // Column indices for "All Vehicles" sheet (66 columns, 0-indexed)
 const COL = {
