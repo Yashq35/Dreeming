@@ -1,0 +1,5 @@
+{
+  "buildCommand": "cd suriname-car-review && npm install && npm run build",
+  "outputDirectory": "suriname-car-review/out",
+  "installCommand": "echo 'skip'"
+}
